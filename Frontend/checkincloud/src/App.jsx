@@ -1,20 +1,25 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Login from './pages/Login';
+import HomePage from './components/HomePage';
+import LoginForm from './components/LoginForm';
+import HotelsPage from './components/HotelsPage';
+import HotelDetailView from './components/HotelDetailView';
+import './styles/App.css';
 
 const App = () => {
   return (
-    <div>
     <Router>
-      
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginForm />} />
+          <Route path="/hotels" element={<HotelsPage />} />
+          <Route path="/hotel/:id" element={<HotelDetailView />} />
+        </Routes>
+      </div>
     </Router>
-    </div>
   );
 };
 
