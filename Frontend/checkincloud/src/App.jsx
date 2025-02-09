@@ -5,6 +5,7 @@ import HomePage from './components/HomePage';
 import LoginForm from './components/LoginForm';
 import HotelsPage from './components/HotelsPage';
 import HotelDetailView from './components/HotelDetailView';
+import Footer from './components/Footer';
 import './styles/App.css';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/hotels" element={<HotelsPage />} />
           <Route path="/hotel/:id" element={<HotelDetailView />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
