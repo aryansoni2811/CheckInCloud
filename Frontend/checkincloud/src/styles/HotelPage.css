@@ -7,6 +7,7 @@
   .hotels-title {
     font-size: 2.5rem;
     font-weight: 700;
+    
     margin-bottom: 2rem;
     color: #1a1a1a;
   }
@@ -150,3 +151,38 @@
     padding: 16px;
     gap: 8px;
   }
+
+
+  /* Add these to your HotelPage.css file */
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  font-size: 1.2rem;
+  color: #dc2626;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Optional: Add a skeleton loading animation */
+.loading-container::after {
+  content: "...";
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { content: "."; }
+  33% { content: ".."; }
+  66% { content: "..."; }
+}

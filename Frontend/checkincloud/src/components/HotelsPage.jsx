@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { MapPin, Star } from "lucide-react";
 import "../styles/HotelPage.css";
 const HotelsPage = () => {
+
+    
     const hotels = [
         {
             id: 1,
